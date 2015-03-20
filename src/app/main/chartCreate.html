@@ -1,0 +1,49 @@
+<div class="container" style="padding-top:70px;">
+  <div>
+    Is Form valid = {{ctrl.myForm.$valid}}
+  </div>
+  <div class="row">
+    <form class="col-sm-8 col-sm-offset-2" name="ctrl.myForm" novalidate ng-submit="ctrl.onSubmit()">
+
+      <div>
+        <input type="text" class="form-control" name="nameInput" ng-model="ctrl.firstName" required placeholder="First Name">
+      </div>
+
+      <div>
+        <input type="text" class="form-control" name="lastNameInput" ng-model="ctrl.lastName" placeholder="Last Name">
+      </div>
+
+      <div>
+        <input type="text" class="form-control" name="address" ng-change="ctrl.getAddr(ctrl.address)" ng-model="ctrl.address" placeholder="address" >
+      </div>
+
+      <!-- <canvas id="bar" class="chart chart-bar" data="ctrl.data" labels="ctrl.labels" legend="true"></canvas> 
+       -->
+      <!-- <div ng-repeat="address in ctrl.addresses.results">
+      {{address.formatted_address}}
+      </div> -->
+      <div>
+        {{ctrl.addresses}}
+      </div>
+      <div email>
+        
+      </div>
+
+      <div>
+        Phone Format (###) ###-####<br>
+        <input type="text" class="form-control" name="phoneInput" ng-model="ctrl.phone" placeholder="Phone Number" 
+          ng-pattern="/^\(\d\d\d\) \d\d\d-\d\d\d\d$/">
+          <div ng-show="ctrl.myForm.phoneInput.$error.pattern"> must be valid
+      </div>
+
+
+      <input  class="form-control btn btn-primary" type="submit" name="submitInput" value="Submit">
+
+      <select ng-model="ctrl.state" ng-options="opt.abvr as opt.name for opt in ctrl.selectOptions" required>
+        <option value="">Select One</option>
+      </select>
+
+    </form>
+  </div>
+
+</div>

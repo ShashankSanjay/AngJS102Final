@@ -1,0 +1,21 @@
+{
+   "row":[
+      {
+         "code_id":123,
+         "value":"Dollars (US)",
+         "parent_code_id":0
+      },
+      {
+         "code_id":124,
+         "value":"Euro "
+      },
+      {
+         "code_id":125,
+         "value":"U.K. Pound Sterling"
+      },
+      {
+         "code_id":126,
+         "value":"Japanese Yen"
+      }
+   ]
+}

@@ -1,0 +1,38 @@
+{  
+   "root":{
+         "codes":{
+            "teams":{
+               "row":[
+                  {
+                     "code_id":37,
+                     "value":"Sample Group One"
+                  },
+                  {
+                     "code_id":1289,
+                     "value":"Sample Group Two"
+                  },
+                  {
+                     "code_id":511,
+                     "value":"Sample Group Three"
+                  },
+                  {
+                     "code_id":441,
+                     "value":"Industry Team - Vert One"
+                  },
+                  {
+                     "code_id":442,
+                     "value":"Industry Team - Vert Two"
+                  },
+                  {
+                     "code_id":100634,
+                     "value":"Industry Team - Vert Three"
+                  },
+                  {
+                     "code_id":443,
+                     "value":"Industry Team - Vert Four"
+                  }
+               ]
+            }
+         }
+   }
+}

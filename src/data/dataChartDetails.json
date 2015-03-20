@@ -1,0 +1,36 @@
+{ 
+	"chart_data_details": [
+		{
+			"actual_amt":"307.6",
+			"label": "Jan-14"
+		},
+		{
+			"actual_amt":"626.37",
+			"label": "Feb-14"
+		},
+		{
+			"actual_amt":"440.64",
+			"label": "Mar-14"
+		},
+		{
+			"actual_amt":"280.41",
+			"label": "Apr-14"
+		},
+		{
+			"actual_amt":"307.6",
+			"label": "May-14"
+		},
+		{
+			"actual_amt":"626.37",
+			"label": "Jun-14"
+		},
+		{
+			"actual_amt":"440.64",
+			"label": "Jul-14"
+		},
+		{
+			"actual_amt":"280.41",
+			"label": "Aug-14"
+		}
+	]
+}

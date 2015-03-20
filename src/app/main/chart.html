@@ -1,0 +1,74 @@
+<div class="container" style="padding-top:40px;">
+
+	<div class="row">
+		<h1>Dashboard</h1>
+	</div>
+
+	<div class="row well">
+		
+		<div class="col-md-12" id='chart-container'>
+			
+			<div fusioncharts
+		    width="{{ctrl.divWidth}}" 
+		    height="400"
+		    type="MSCombiDY2D"
+		    chart="{{ctrl.attrs}}"
+		    categories="{{ctrl.categories}}"
+		    dataset="{{ctrl.dataset}}"
+		    ></div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+					<div class="btn-group" dropdown >
+				      <button type="button" class="btn dropdown-toggle" ng-class="ctrl.team.codeId > 0 ? 'btn-primary' : 'btn-warning'" dropdown-toggle>
+				        {{ctrl.team.value | makeTeamDisplay}} <span class="caret"></span>
+				      </button>
+				      <ul class="dropdown-menu" role="menu">
+				        <li ng-repeat="opts in ctrl.teams | teamFilter" ng-click="ctrl.selectTeam(opts)"><a href="">{{opts.value | makeTeamDisplay}}</a></li>
+				        </ul>
+				    </div>
+				 <!--  </li>
+				  <li class="dropdown"> -->
+				    <div class="btn-group" dropdown >
+				      <button type="button" class="btn dropdown-toggle" ng-class="ctrl.currency.codeId > 0 ? 'btn-primary' : 'btn-warning'" dropdown-toggle>
+				        {{ctrl.currency.value}} <span class="caret"></span>
+				      </button>
+				      <ul class="dropdown-menu" role="menu">
+				        <li ng-repeat="opts in ctrl.currencies" ng-click="ctrl.selectCurrency(opts)"><a href="">{{opts.value}}</a></li>
+				        </ul>
+				    </div>
+				
+				    <div class="btn-group" dropdown >
+				      <button type="button" class="btn dropdown-toggle" ng-class="ctrl.region.codeId > 0 ? 'btn-primary' : 'btn-warning'" dropdown-toggle>
+				        {{ctrl.region.value}} <span class="caret"></span>
+				      </button>
+				      <ul class="dropdown-menu" role="menu">
+				        <li ng-repeat="opts in ctrl.regions" ng-click="ctrl.selectRegion(opts)"><a href="">{{opts.value}}</a></li>
+				        </ul>
+				    </div>
+				    
+				    <div class="btn-group" dropdown >
+				      <button type="button" class="btn dropdown-toggle" ng-class="ctrl.timeInterval.codeId > 0 ? 'btn-primary' : 'btn-warning'" dropdown-toggle>
+				        {{ctrl.timeInterval.value}} <span class="caret"></span>
+				      </button>
+				      <ul class="dropdown-menu" role="menu">
+				        <li ng-repeat="opts in ctrl.timeIntervals" ng-click="ctrl.selectTimeInterval(opts)"><a href="">{{opts.value}}</a></li>
+				        </ul>
+				    </div>
+				    <div class="col-md-3">
+			            <p class="input-group">
+			              <input type="text" class="form-control" datepicker-popup="{{ctrl.format}}" ng-model="ctrl.date" is-open="ctrl.opened" min-date="ctrl.minDate" max-date="'2015-06-22'" datepicker-options="ctrl.dateOptions" date-disabled="ctrl.disabled(date, mode)" ng-required="true" close-text="Close" />
+			              <span class="input-group-btn">
+			                <button type="button" class="btn btn-default" ng-click="ctrl.open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+			              </span>
+			            </p>
+			        </div>
+			        
+			</div>
+		</div>
+	</div>
+	
+	<div table-details deets="ctrl.detailLoaded" grid="ctrl.gridHeaders" ></div>
+
+</div>

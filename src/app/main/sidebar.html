@@ -1,0 +1,51 @@
+<style>
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+</style>
+
+
+<div class="btn-group-vertical">
+    <p>
+    <button class="btn btn-default btn-sm" ng-click="ctrl.status.open = !ctrl.status.open">Toggle last panel</button>
+    <button class="btn btn-default btn-sm" ng-click="ctrl.status.isFirstDisabled = ! ctrl.status.isFirstDisabled">Enable / Disable first panel</button>
+  </p>
+
+  <label class="checkbox">
+    <input type="checkbox" ng-model="ctrl.oneAtATime">
+    Open only one at a time
+  </label>
+  <accordion close-others="ctrl.oneAtATime">
+    <accordion-group heading="Static Header, initially expanded" is-open="ctrl.status.isFirstOpen" is-disabled="ctrl.status.isFirstDisabled">
+      This content is straight in the template.
+    </accordion-group>
+    <accordion-group heading="{{group.title}}" ng-repeat="group in ctrl.groups">
+      {{group.content}}
+    </accordion-group>
+    <accordion-group heading="Dynamic Body Content">
+      <p>The body of the accordion group grows to fit the contents</p>
+        <button class="btn btn-default btn-sm" ng-click="ctrl.addItem()">Add Item</button>
+        <div ng-repeat="item in ctrl.items">{{item}}</div>
+    </accordion-group>
+    <accordion-group is-open="ctrl.status.open">
+        <accordion-heading>
+            I can have markup, too! <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': ctrl.status.open, 'glyphicon-chevron-right': !ctrl.status.open}"></i>
+        </accordion-heading>
+        This is just some content to illustrate fancy headings.
+    </accordion-group>
+  </accordion>
+</div>
+
+<ul class="nav nav-pills nav-stacked">
+  <li class="active"><a href>Home</a></li>
+  <li><a href>Profile</a></li>
+  <li class="disabled"><a href>Disabled</a></li>
+  <li class="dropdown">
+    <a class="dropdown-toggle" data-toggle="dropdown" href aria-expanded="false">
+      Dropdown <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+        <li ng-repeat="choice in items">
+          <a href>{{choice}}</a>
+        </li>
+      </ul>
+  </li>
+</ul>

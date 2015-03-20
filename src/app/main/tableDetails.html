@@ -1,0 +1,23 @@
+<div class="row">
+		<div  class="col-md-12">
+		<table st-table="ctrl.stChartDetail" st-safe-src="ctrl.chartDetail" class="table table-striped">
+			<thead>
+			<tr>
+				<th ng-repeat="header in ctrl.grid" st-sort="{{header.field}}" >{{header.displayName}}</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr ng-repeat="row in ctrl.stChartDetail">
+				<td class="col-md-1">{{row.comp_name}}</td>
+				<td class="col-md-1">{{row.actual_amt | currency}}</td>
+				<td class="col-md-1">{{row.industry}}</td>
+				<td class="col-md-1">{{row.region }}</td>
+				<td class="col-md-1">{{row.ownership_perc }}</td>
+				<td class="col-md-1">{{row.fye }}</td>
+				<td class="col-md-1">{{row.period | date}}</td>
+				<td class="col-md-1">{{row.period_end_date | date}}</td>
+			</tr>
+			</tbody>
+		</table>
+		</div>
+	</div>

@@ -1,0 +1,23 @@
+{
+   "data":{
+      "root":{
+         "all_fund_dropdown":{
+            "row":[
+               {
+                  "fund_id":14,
+                  "name":"Fund One"
+               },
+               {
+                  "fund_id":107,
+                  "name":"Fund Two"
+               },
+               {
+                  "fund_id":360,
+                  "name":"Fund Three"
+               }
+            ]
+         }
+      }
+   }
+   "statusText":"OK"
+}

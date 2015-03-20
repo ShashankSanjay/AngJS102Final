@@ -1,0 +1,31 @@
+{
+   "data":{
+      "root":{
+         "pipeline_details":{
+            "row":[
+               {
+                  "code_id":102166,
+                  "value":"Africa",
+                  "abbr":{
+
+                  }
+               },
+               {
+                  "code_id":100006,
+                  "value":"Australia",
+                  "abbr":{
+
+                  }
+               },
+               {
+                  "code_id":102167,
+                  "value":"Austria / Switzerland",
+                  "abbr":{
+
+                  }
+               }
+            ]
+         }
+      }
+   }
+}
